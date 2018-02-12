@@ -9,7 +9,7 @@ import { PtItemStatusType } from './app/shared/models/domain/types';
 import { PtAuthToken, PtItem, PtTask, PtComment, PtRegisterModel, PtUser, PtLoginModel } from "./app/shared/models/domain";
 import { newGuid } from "./app/util/guid";
 
-const port = 8080;
+const port = 5000;
 
 const usersPerPage = 20;
 
@@ -436,6 +436,7 @@ const httpServer = http.createServer(app);
 //const httpsServer = https.createServer(sslOptions, app);
 
 httpServer.listen(port, (err) => {
+    console.log('Server created! Listen on port: ' + port);
     if (err) {
         console.error(err);
     }
