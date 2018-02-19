@@ -365,7 +365,6 @@ router.post('/comment', (req: Request, res: Response) => {
 router.get('/photo/:id', (req: Request, res: Response) => {
     const userId = parseInt(req.params.id);
     const user = currentPtUsers.find(u => u.id === userId && u.dateDeleted === undefined);
-    console.log(user);
 
     let found = false;
     if (user) {
